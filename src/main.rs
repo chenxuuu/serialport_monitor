@@ -7,6 +7,8 @@ use args_parse::Args;
 fn main() {
     let args = match Args::try_parse(){
         Ok(a) => a,
+        Err(e) if e.kind() == clap::error::ErrorKind::DisplayHelp => Args::parse() ,
+        Err(e) if e.kind() == clap::error::ErrorKind::DisplayVersion => Args::parse() ,
         _ => {
             //没给参数，手动获取下
             let mut buff = String::new();
