@@ -1,4 +1,4 @@
-use clap::{AppSettings,Parser};
+use clap::{AppSettings, Parser};
 
 #[derive(Parser, Debug)]
 #[clap(global_setting(AppSettings::DeriveDisplayOrder))]
@@ -13,7 +13,7 @@ pub struct Args {
     #[clap(short, long, value_parser, default_value_t = 0)]
     pub rts: u8,
     ///DTR status; 0 disable, 1 enable
-    #[clap(short, long, value_parser, default_value_t = 1)]
+    #[clap(short, long, value_parser, default_value_t = 0)]
     pub dtr: u8,
 }
 
@@ -30,7 +30,7 @@ pub fn get_args() -> Args {
                 port: String::new(),
                 baud_rate: 115200,
                 rts: 0,
-                dtr: 1,
+                dtr: 0,
             };
             println!("your serial ports list:");
             let port_list = serialport::available_ports().unwrap();
@@ -61,7 +61,7 @@ pub fn get_args() -> Args {
                 a.rts = buff.trim().parse().unwrap();
             }
             buff.clear();
-            println!("please set dtr status (default 1, enable):");
+            println!("please set dtr status (default 0, enable):");
             std::io::stdin().read_line(&mut buff).expect("read_line error!");
             if buff.trim().len() != 0 {
                 a.dtr = buff.trim().parse().unwrap();
