@@ -213,7 +213,6 @@ fn get_key_data(key: KeyCode, ctrl: bool) -> Vec<u8> {
         KeyCode::F(11) => get_special_key_codes("[23~"),
         KeyCode::F(12) => get_special_key_codes("[24~"),
 
-
         _ => vec![], //其他按键不处理
     }
 }
