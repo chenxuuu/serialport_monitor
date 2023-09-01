@@ -11,3 +11,9 @@
 我是搭配window terminal用，挺好
 
 已上传win的编译文件到release，可以自取
+
+## Install
+
+```bash
+cargo install serialport_monitor
+```
