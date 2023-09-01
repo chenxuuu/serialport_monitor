@@ -1,8 +1,16 @@
 [package]
 name = "serialport_monitor"
 version = "1.0.0"
+description = "monitor and control serialport in terminal"
 authors = ["chenxuuu <lolicon@papapoi.com>"]
 edition = "2021"
+repository = "https://github.com/chenxuuu/serialport_monitor"
+homepage = "https://github.com/chenxuuu/serialport_monitor"
+keywords = ["serialport", "cli"]
+license = "MIT"
+exclude = [
+    "img/*",
+]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
