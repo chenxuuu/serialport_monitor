@@ -1,7 +1,7 @@
-use clap::{AppSettings, Parser};
+use clap::Parser;
 
 #[derive(Parser, Debug)]
-#[clap(global_setting(AppSettings::DeriveDisplayOrder))]
+#[clap()]
 pub struct Args {
     ///port name, example COM1,/dev/ttyUSB0
     #[clap(short, long, value_parser,value_name="port")]
