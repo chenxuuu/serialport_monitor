@@ -1,6 +1,6 @@
 [package]
 name = "serialport_monitor"
-version = "1.0.1"
+version = "1.1.0"
 description = "monitor and control serialport in terminal"
 authors = ["chenxuuu <lolicon@papapoi.com>"]
 edition = "2021"
